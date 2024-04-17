@@ -32,17 +32,15 @@ jobs:
 
     - name: Run Tests
       run: |
-        python DJANGO/escolas test
-        python DJANGO/usuarios test
+        cd DJANGO/escolas test
+        cd DJANGO/usuarios test
+
 
     - name: Collect Static Files
       run: python manage.py collectstatic --noinput
 
     - name: Run Migrations
-      run: |
-        python DJANGO/escolas/migrations migrate
-        python DJANGO/usuarios/migrations migrate
-
+      run: python DJANGO/escola/manage.py migrate
 
     - name: Validate Conventional Commits
       run: |
