@@ -30,8 +30,8 @@ jobs:
     - name: Navigate to Django Project Directory
       run: cd DJANGO/escola
 
-    # - name: Run Tests
-    #   run: python DJANGO/escolas/manage.py test
+    - name: Run Tests
+      run: python DJANGO/manage.py test
 
     - name: Collect Static Files
       run: python manage.py collectstatic --noinput
