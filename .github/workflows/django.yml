@@ -34,7 +34,7 @@ jobs:
       run: ls -l DJANGO/
 
     - name: Run Tests
-      run: python DJANGO/manage.py test
+      run: python DJANGO/escola/manage.py test
 
     - name: Collect Static Files
       run: python manage.py collectstatic --noinput
