@@ -34,7 +34,7 @@ jobs:
       run: python DJANGO/escola/manage.py test
 
     - name: Collect Static Files
-      run: python manage.py collectstatic --noinput
+      run: python DJANGO/escola/manage.py collectstatic --noinput
 
     # - name: Run Migrations
     #   run: python DJANGO/escola/manage.py migrate
