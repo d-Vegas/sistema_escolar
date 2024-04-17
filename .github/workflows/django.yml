@@ -31,10 +31,7 @@ jobs:
       run: cd DJANGO/escola
 
     - name: Run Tests
-      run: |
-        cd DJANGO/escolas test
-        cd DJANGO/usuarios test
-
+      run: python manage.py test
 
     - name: Collect Static Files
       run: python manage.py collectstatic --noinput
