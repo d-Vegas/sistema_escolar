@@ -30,9 +30,6 @@ jobs:
     - name: Navigate to Django Project Directory
       run: cd DJANGO/escola
 
-    - name: List Directory Contents
-      run: ls -l DJANGO/
-
     - name: Run Tests
       run: python DJANGO/escola/manage.py test
 
