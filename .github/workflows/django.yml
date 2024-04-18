@@ -36,8 +36,8 @@ jobs:
     - name: Collect Static Files
       run: python DJANGO/escola/manage.py collectstatic --noinput
 
-    # - name: Run Migrations
-    #   run: python DJANGO/escola/manage.py migrate
+    - name: Run Migrations
+      run: python DJANGO/escola/manage.py migrate
 
     - name: Validate Conventional Commits
       run: |
