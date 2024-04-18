@@ -46,8 +46,8 @@ jobs:
     - name: Install Semantic Release and Bump2version
       run: pip install semantic-release bump2version
 
-    - name: Run Semantic Release
-      run: npx semantic-release
+    # - name: Run Semantic Release
+    #   run: npx semantic-release
 
 
 # sadlkmasjdklsad
