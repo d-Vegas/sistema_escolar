@@ -5,9 +5,6 @@ from django.http import HttpResponseRedirect,Http404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
-
-# Create your views here.
-
 def index(requests):
     return render(requests,'escolas/index.html')
 
@@ -84,3 +81,9 @@ def editarCurso(requests,idCurso):
     contexto = {'cursos':cursos,'aluno':aluno,'form':form}
     
     return render(requests,'escolas/editarCurso.html',contexto)
+
+def cadastrarCurso(requests, idAluno):
+    aluno = Aluno.objects.get(id=idAluno)
+    
+    if aluno.dono != requests.user:
+        return Http404
