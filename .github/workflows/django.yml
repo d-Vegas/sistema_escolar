@@ -39,9 +39,10 @@ jobs:
     - name: Run Migrations
       run: python DJANGO/escola/manage.py migrate
 
-    # - name: Validate Conventional Commits
-    #   run: |
-    #     git log --format="%s" ${{ github.event.before }}..${{ github.sha }} | grep -E '^(feat|fix|docs|style|refactor|perf|test|build|ci)(\(.+\))?: .+' || (echo "Error: Commits should follow Conventional Commits convention." && exit 1)
+    - name: Validate Conventional Commits
+      run: |
+          git log --format="%s" ${{ github.event.before }}..${{ github.sha }} | grep -E '^(feat|fix|docs|style|refactor|perf|test|build|ci)(\(.+\))?: .+' || (echo "Error: Commits should follow Conventional Commits convention." && exit 1)
+
 
     - name: Install Semantic Release and Bump2version
       run: pip install semantic-release bump2version
