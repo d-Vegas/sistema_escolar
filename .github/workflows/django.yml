@@ -41,8 +41,7 @@ jobs:
 
     - name: Validate Conventional Commits
       run: |
-          git log --format="%s" f96bbfbd8db69344248419e72fdae1ea4250a6aa..9d647858b04470a8d1e4b5f3f3ea02af8d27d301 | grep -E '^(feat|fix|docs|style|refactor|perf|test|build|ci)(\(.+\))?: .+' || (echo "Error: Commits should follow Conventional Commits convention." && exit 1)
-
+        git log --format="%s" ${{ github.event.before }}..${{ github.sha }} | grep -E '^(feat|fix|docs|style|refactor|perf|test|build|ci)(\(.+\))?: .+' || (echo "Error: Commits should follow Conventional Commits convention." && exit 1)
 
     - name: Install Semantic Release and Bump2version
       run: pip install semantic-release bump2version
