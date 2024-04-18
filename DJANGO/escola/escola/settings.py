@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'escola.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'elite',
-        'USER': 'root',
-        'PASSWORD': 'grc12grc',
-        'HOST': 'localhost',  # Ou o endereço IP do seu servidor MySQL
+        'NAME': 'u274908554_509A',
+        'USER': 'u274908554_509A',
+        'PASSWORD': 'INbd509A',
+        'HOST': 'sql812.main-hosting.eu',  # Ou o endereço IP do seu servidor MySQL
         'PORT': '3306',       # Porta padrão do MySQL
     }
 }
